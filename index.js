@@ -1,12 +1,12 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, MessageFlags, PermissionFlagsBits } = require('discord.js');
+process.env.FFMPEG_PATH = require('ffmpeg-static');
 const { DisTube } = require('distube');
 const { SpotifyPlugin } = require('@distube/spotify');
 const { SoundCloudPlugin } = require('@distube/soundcloud');
 const { YtDlpPlugin } = require('@distube/yt-dlp');
 const fs = require('fs');
 const path = require('path');
-
 // 1. Configuración del Cliente de Discord
 const client = new Client({
     intents: [
